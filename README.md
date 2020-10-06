@@ -65,8 +65,7 @@ This Terraform configuration is designed to use a [remote backend]() that needs 
 
     Token for app.terraform.io:
       Enter a value: 
-
-  ```
+   ```
 3. Choose a TFC organization or [create one](https://www.terraform.io/docs/cloud/users-teams-organizations/organizations.html#creating-organizations)
 4. Edit/Create your `backend.hcl` file:
    ```
