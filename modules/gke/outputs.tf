@@ -23,7 +23,7 @@ output "ca_certificate" {
 #   value = google_container_cluster.primary.master_auth.0.client_certificate
 # }
 output "cluster_endpoint" {
-  value = google_container_cluster.primary.endpoint
+  value = data.google_container_cluster.gke_cluster.endpoint
   # value = data.google_container_cluster.gke_cluster.endpoint
 }
 output "cluster_name" {

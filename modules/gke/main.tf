@@ -86,8 +86,8 @@ resource "google_container_node_pool" "primary_nodes" {
       "${var.owner}-gke"
     ]
   }
-  autoscaling {
-    min_node_count = 0
-    max_node_count = var.nodes*2
-  }
+  # autoscaling {
+  #   min_node_count = 0
+  #   max_node_count = var.nodes*2
+  # }
 }
