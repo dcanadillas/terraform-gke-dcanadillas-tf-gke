@@ -10,5 +10,5 @@ output "k8s_endpoint" {
   value = module.gke.cluster_endpoint
 }
 output "cluster_name" {
-  value = module.gke.name
+  value = module.gke.cluster_name
 }
