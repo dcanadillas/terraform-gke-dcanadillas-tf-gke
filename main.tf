@@ -47,17 +47,17 @@ module "gke" {
   default_gke = var.default_gke
 }
 
-resource "google_storage_bucket_object" "jx-requirements" {
-  name   = "jx-requirements.yml"
-  content = templatefile("${path.module}/templates/jx-requirements.yml.tpl",{
-    gke_cluster = var.gke_cluster,
-    owner = var.owner,
-    github_org = var.owner,
-    zone = var.gcp_zone,
-    project = var.gcp_project
-  })
-  bucket = var.gcs_bucket
-}
+# resource "google_storage_bucket_object" "jx-requirements" {
+#   name   = "jx-requirements.yml"
+#   content = templatefile("${path.module}/templates/jx-requirements.yml.tpl",{
+#     gke_cluster = var.gke_cluster,
+#     owner = var.owner,
+#     github_org = var.owner,
+#     zone = var.gcp_zone,
+#     project = var.gcp_project
+#   })
+#   bucket = var.gcs_bucket
+# }
 
 
 # resource "local_file" "jx-requirements" {
