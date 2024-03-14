@@ -2,6 +2,17 @@ terraform {
   required_version = ">= 0.12.26"
   backend "remote" {}
 }
+<<<<<<< HEAD
+=======
+terraform {
+  required_providers {
+    google = {
+      source = "hashicorp/google"
+      version = "4.22.0"
+    }
+  }
+}
+>>>>>>> 7d8d157 (Removing bucket for jx requirements)
 
 # Collect client config for GCP
 data "google_client_config" "current" {

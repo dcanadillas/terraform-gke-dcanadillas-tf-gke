@@ -25,9 +25,9 @@ variable "regional_k8s" {
 variable "owner" {
   description = "Owner name to tag clusters"
 }
-variable "gcs_bucket" {
-  description = "Bucket to save template files created"
-}
+# variable "gcs_bucket" {
+#   description = "Bucket to save template files created"
+# }
 variable "service_account" {
   description = "Service Account to be used as scope permissions"
 }
@@ -39,7 +39,7 @@ variable "default_network" {
   description = "Set it to true if you cant to use the default network in GCP"
   default = false
 }
-variable "dns_zone" {
-  description = "Cloud DNS zone to create record"
-  default = null
-}
+# variable "dns_zone" {
+#   description = "Cloud DNS zone to create record"
+#   default = null
+# }
