@@ -12,7 +12,7 @@ variable "zone" {
   description = "availability zones"
 }
 variable "cluster_name" {
-  description = "Name of your cluster  "
+  description = "Name of your cluster "
 }
 variable "nodes" {
   description = "Number of nodes of the cluster"

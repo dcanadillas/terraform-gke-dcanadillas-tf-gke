@@ -19,20 +19,19 @@ It will create the following resources in GCP:
 - A Google Container Engine cluster (GKE) and its associated resources
 - A node pool for the GKE cluster
 - Specific network and subnetwork for the GKE resources
-- The `jx-requirements.yml` 
 
 ## Requirements
 
 These are the requirements to use this Terraform configuration:
-* Download [Terraform CLI]() (v0.12.26 or newer)
+* Download [Terraform CLI]() (v1.0 or newer)
 * A GCP account credentials with permissions to create GKE and networking resources
 
-## Using Terrraform Cloud (TFC) or Terraform Enterprise (TFE)
+## Using HCP Terrraform or Terraform Enterprise (TFE)
 
 This Terraform configuration is designed to use a [remote backend]() that needs to be defined in a `backend.hcl` file. So you only need to follow these steps (This is a TFC example. For TFE you should be aware of your TFE url different than `app.terraform.io`, but it is basically the same process):
 
-1. [Sign up for a TFC account](https://app.terraform.io/signup/account) if you don't have one already
-2. If you don't still have a [Terraform Cloud API token](https://app.terraform.io/app/settings/tokens), create one by login into Terrafomr from CLI:
+1. [Sign in or sign up for an HCP Portal account](https://portal.cloud.hashicorp.com/sign-in)
+2. If you don't still have an [HCP Terraform API token](https://app.terraform.io/app/settings/tokens), create one by login into Terraform from CLI:
    ```
    $ terraform login
     Terraform will request an API token for app.terraform.io using your browser.
@@ -66,7 +65,7 @@ This Terraform configuration is designed to use a [remote backend]() that needs 
     Token for app.terraform.io:
       Enter a value: 
    ```
-3. Choose a TFC organization or [create one](https://www.terraform.io/docs/cloud/users-teams-organizations/organizations.html#creating-organizations)
+3. Choose a Terraform organization or [create one](https://www.terraform.io/docs/cloud/users-teams-organizations/organizations.html#creating-organizations)
 4. Edit/Create your `backend.hcl` file:
    ```
    hostname     = "app.terraform.io"

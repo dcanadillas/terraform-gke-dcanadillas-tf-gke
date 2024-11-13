@@ -15,8 +15,6 @@ data "google_container_engine_versions" "k8sversion" {
 }
 
 resource "google_container_cluster" "primary" {
-  # provider = google-beta
-  # project = var.project
   name     = var.cluster_name
   location = var.regional_k8s ? var.region : var.zone
   # node_version = data.google_container_engine_versions.k8sversion.latest_node_version
